@@ -2,80 +2,94 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mi Perfil Académico</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f5f5f5;
+      font-family: 'Roboto', sans-serif;
+      background: #f9f9f9;
       color: #333;
     }
 
-    header, footer {
-      background-color: #004d99;
+    header {
+      background: #4CAF50;
       color: white;
+      padding: 1rem 2rem;
       text-align: center;
-      padding: 1rem 0;
-      font-size: 3rem;
     }
 
-    main {
-      padding: 1rem;
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    .container {
       max-width: 800px;
-      margin: auto;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
 
-    h1, h2 {
-      color: #004d99;
+    h2 {
+      color: #4CAF50;
+      margin-bottom: 1rem;
     }
 
-    section {
-      margin-bottom: 2rem;
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
+      transition: transform 0.2s ease;
     }
 
-    a {
-      color: #004d99;
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card a {
       text-decoration: none;
+      color: #4CAF50;
+      font-weight: bold;
     }
 
-    a:hover {
-      text-decoration: underline;
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #888;
     }
-
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Mi Perfil Académico</h1>
-    <p>Federico Alejandro MORENO</p>
+    <h1>Federico Moreno</h1>
+    <p>Estudiante - Informática Educativa</p>
   </header>
 
-  <main>
-    <section>
-      <h2>Sobre mí</h2>
-      <p>¡Hola! Soy estudiante del ciclo de Informática Educativa. Este sitio contiene una presentación de mi perfil académico, proyectos y trabajos realizados a lo largo de la materia.</p>
-    </section>
+  <div class="container">
+    <h2>Trabajos Prácticos</h2>
 
-    <section>
-  <h2>Trabajos prácticos realizados</h2>
-  <ul>
-    <li><a href="TP%201%20-%20SISTEMA%20INMUNOL%C3%93GICO.pdf" target="_blank">TP 1 - SISTEMA INMUNOLÓGICO</a></li>
-    <li><a href="TP%202%20-%20Historia%20de%20las%20Clasificaciones.pdf" target="_blank">TP 2 - Historia de las Clasificaciones</a></li>
-    <li><a href="TP%203%20-%20Recursos%20para%20Biolog%C3%ADa%20(Benvenuto,%20Bolpato,%20Moreno).pdf" target="_blank">TP 3 - Recursos para Biología (Benvenuto, Bolpato, Moreno)</a></li>
-    <li><a href="TP%204%20-%20Aplicaci%C3%B3n%20de%20IA's%20(Benvenuto,%20Bolpato,%20Moreno).pdf" target="_blank">TP 4 - Aplicación de IA's (Benvenuto, Bolpato, Moreno)</a></li>
-  </ul>
-</section>
-
-    <section>
-      <h2>Contacto</h2>
-      <p>Podés contactarme a través del correo: <a href="fmoreno_91@hotmail.com">fmoreno_91@hotmail.com</a></p>
-    </section>
-  </main>
+    <div class="card">
+      <p><a href="TP%201%20-%20SISTEMA%20INMUNOL%C3%93GICO.pdf" target="_blank">TP 1 - SISTEMA INMUNOLÓGICO</a></p>
+    </div>
+    <div class="card">
+      <p><a href="TP%202%20-%20Historia%20de%20las%20Clasificaciones.pdf" target="_blank">TP 2 - Historia de las Clasificaciones</a></p>
+    </div>
+    <div class="card">
+      <p><a href="TP%203%20-%20Recursos%20para%20Biolog%C3%ADa%20(Benvenuto,%20Bolpato,%20Moreno).pdf" target="_blank">TP 3 - Recursos para Biología</a></p>
+    </div>
+    <div class="card">
+      <p><a href="TP%204%20-%20Aplicaci%C3%B3n%20de%20IA's%20(Benvenuto,%20Bolpato,%20Moreno).pdf" target="_blank">TP 4 - Aplicación de IA's</a></p>
+    </div>
+  </div>
 
   <footer>
-    <p>© 2025 - Mi Sitio Académico</p>
+    Contacto: fmoreno_91@hotmail.com
   </footer>
+
 </body>
 </html>

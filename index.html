@@ -6,23 +6,40 @@
   <title>Mi Perfil Académico</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
   <style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f4ff;
+    margin: 0;
+    padding: 0;
+  }
+
+  .section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
   .card {
     position: relative;
-    overflow: hidden;
-    cursor: pointer;
+    width: 280px;
     border-radius: 10px;
+    overflow: hidden;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.2s;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    background-color: #ffffff;
   }
 
   .card img {
     width: 100%;
     display: block;
-    transition: transform 0.3s ease;
+    height: auto;
   }
 
-  .card:hover img {
-    transform: scale(1.05);
+  .card:hover {
+    transform: scale(1.03);
   }
 
   .overlay {
@@ -41,7 +58,6 @@
     opacity: 1;
   }
 
-  /* Modal */
   .modal {
     display: none;
     position: fixed;
@@ -70,6 +86,7 @@
   }
 </style>
 
+
 </head>
 <body>
 
@@ -84,7 +101,7 @@
   <div>
 <div class="section">
   <div class="card" onclick="openModal('separador1.jpg')">
-    <img src="separador1.jpg" alt="Estructura Floral">
+    <img src="'separador1.jpg" alt="Estructura Floral">
     <div class="overlay">ESTRUCTURA FLORAL CON ESTILO DE ILUSTRACIÓN MEDIEVAL (IA)</div>
   </div>
   <div class="card" onclick="openModal('separador2.jpg')">
@@ -92,7 +109,7 @@
     <div class="overlay">CADENA TRÓFICA DE LAGUNA DE LA PAMPA (IA)</div>
   </div>
   <div class="card" onclick="openModal('mapa1.png')">
-    <img src="mapa1.png" alt="Ecorregiones">
+    <img src="mapa1.png" alt="Ecorregiones La Pampa">
     <div class="overlay">Nativas por Ecorregiones de La Pampa</div>
   </div>
   <div class="card" onclick="openModal('mapa2.png')">
@@ -100,14 +117,9 @@
     <div class="overlay">Herramientas para la clase de Biología</div>
   </div>
   <div class="card" onclick="openModal('moreno-yeswecan.png')">
-    <img src="moreno-yeswecan.png" alt="Perfil Docente">
+    <img src="moreno-yeswecan.png" alt="Perfil Estilo Obama">
     <div class="overlay">Perfil estilo “Yes We Can”</div>
   </div>
-</div>
-
-<div id="imgModal" class="modal" onclick="closeModal()">
-  <span class="modal-close" onclick="closeModal()">&times;</span>
-  <img class="modal-content" id="modalImage">
 </div>
 
 

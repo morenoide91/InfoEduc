@@ -105,7 +105,6 @@
   </div>
 </div>
 
-<!-- Modal para ampliación -->
 <div id="imgModal" class="modal" onclick="closeModal()">
   <span class="modal-close" onclick="closeModal()">&times;</span>
   <img class="modal-content" id="modalImage">
@@ -174,6 +173,18 @@ title="Video célula" frameborder="0" allowfullscreen></iframe>
 <footer>
   Contacto: fmoreno_91@hotmail.com
 </footer>
+
+<script>
+  function openModal(imageSrc) {
+    document.getElementById("imgModal").style.display = "block";
+    document.getElementById("modalImage").src = imageSrc;
+  }
+
+  function closeModal() {
+    document.getElementById("imgModal").style.display = "none";
+  }
+</script>
+
 
 </body>
 </html>

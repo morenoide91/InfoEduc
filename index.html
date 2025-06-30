@@ -153,6 +153,19 @@
        font-weight: bold;
      }
 
+.modal-caption {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 15px;
+  max-width: 90%;
+  margin: 10px auto;
+  border-radius: 10px;
+  font-size: 0.95em;
+  line-height: 1.4em;
+  font-family: 'Roboto', sans-serif;
+}
+
+
   </style>
 </head>
 <body>
@@ -166,7 +179,17 @@
   <div class="column">
     <!-- Ilustraciones IA -->
     <div class="section-title">IA de imágenes: Leonardo AI</div>
-    <div class="card" onclick="openModal('separador1.jpg', 'Plan de Movilización de Anfiteatros de san Mario')">
+    <div class="card" onclick="openModal('separador1.jpg', `
+  <strong>1)</strong> Leonardo AI es más preciso en los resultados cuando escribís un prompt en inglés. Entonces, me dirigí a ChatGPT para pedirle que traduzca la siguiente indicación:<br><br>
+  <em>“Quiero realizar un prompt en inglés para la creación de una imagen pedagógica para una clase de biología. Quiero explicarles a mis alumnos la estructura floral común, que contenga las piezas florales (sépalos, pétalos, estambres, carpelos) y sus verticilos (cáliz, corola, androceo y gineceo). Si puede tener un corte longitudinal que pueda observar el ovario y sus partes, mejor. Hazlo con un formato de libro de la Edad Media.”</em><br><br>
+  <strong>2)</strong> Luego coloqué este prompt en Leonardo AI:<br><br>
+  <em>“Create a medieval-style illuminated manuscript illustration showing the anatomy of a typical flower. The image should include a detailed longitudinal section of the flower to reveal the internal structure of the ovary and its parts. Label and depict clearly the floral organs: sepals, petals, stamens, and carpels. Also represent the four floral whorls: calyx (with sepals), corolla (with petals), androecium (with stamens), and gynoecium (with carpels and ovary). Use rich colors and decorative borders typical of medieval botanical manuscripts. Add handwritten-style labels in Latin or old-style script, giving the scientific names of each part. The overall style should resemble an illustrated page from a 13th-century herbal book.”</em><br><br>
+  <strong>3)</strong> El resultado fue la generación de esta imagen.
+`)">
+  <img src="separador1.jpg" alt="Estructura Floral">
+  <div class="overlay">ESTRUCTURA FLORAL CON ESTILO DE ILUSTRACIÓN MEDIEVAL (IA)</div>
+</div>
+
       <img src="separador1.jpg" alt="Estructura Floral">
       <div class="overlay">ESTRUCTURA FLORAL CON ESTILO DE ILUSTRACIÓN MEDIEVAL (IA)</div>
     </div>
@@ -254,10 +277,11 @@
     Contacto: fmoreno_91@hotmail.com
   </footer>
 
-  <div id="imgModal" class="modal" onclick="closeModal()">
+<div id="imgModal" class="modal" onclick="closeModal()">
   <span class="modal-close">&times;</span>
   <img class="modal-content" id="modalImage">
-  <div id="modalCaption">¿Esto qué es?</div> <!-- Banner -->
+  <div class="modal-caption" id="modalCaption"></div>
+</div>
   <div id="modalCaption" style="
   position: absolute;
   bottom: 0;

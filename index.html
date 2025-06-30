@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mi Perfil Académico</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anantason+ExtraExpanded&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -15,19 +15,36 @@
 
     header {
       text-align: center;
-      padding: 20px;
+      padding: 40px 20px 20px;
+      background: linear-gradient(to bottom, #d6f0ff, #e6f4ff);
     }
 
-    h1 {
-      color: red;
-      font-size: 2.5em;
+    .main-title {
+      font-family: 'Anantason ExtraExpanded', sans-serif;
+      color: #d60000;
+      font-size: 4em;
       margin: 0;
+      letter-spacing: 1px;
     }
 
-    h2 {
-      color: #000;
-      font-weight: normal;
-      font-size: 1.2em;
+    .subtitle-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .subtitle-container span {
+      white-space: nowrap;
+    }
+
+    .subtitle-line {
+      flex-grow: 1;
+      height: 1px;
+      background-color: black;
     }
 
     .grid-container {
@@ -51,7 +68,6 @@
       cursor: pointer;
       background-color: #ffffff;
       text-align: center;
-      padding: 10px;
     }
 
     .card img {
@@ -97,8 +113,10 @@
       position: fixed;
       z-index: 999;
       padding-top: 60px;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
       background-color: rgba(0,0,0,0.8);
     }
 
@@ -110,25 +128,25 @@
       border-radius: 10px;
     }
 
+    .modal-caption {
+      color: white;
+      background-color: rgba(0, 0, 0, 0.65);
+      padding: 15px;
+      max-width: 90%;
+      margin: 10px auto;
+      border-radius: 10px;
+      font-size: 0.95em;
+      line-height: 1.4em;
+    }
+
     .modal-close {
       position: absolute;
-      top: 20px; right: 35px;
+      top: 20px;
+      right: 35px;
       color: white;
       font-size: 30px;
       font-weight: bold;
       cursor: pointer;
-    }
-
-    .modal-caption {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      text-align: center;
-      padding: 12px;
-      font-size: 16px;
-      font-family: Arial, sans-serif;
     }
 
     .section-title {
@@ -169,30 +187,36 @@
 </head>
 <body>
   <header>
-    <h1>FEDERICO MORENO</h1>
-    <h2>Estudiante de Prof. en Cs. Biológicas - INFORMÁTICA EDUCATIVA</h2>
+    <h1 class="main-title">FEDERICO MORENO</h1>
+    <div class="subtitle-container">
+      <span>ESTUDIANTE DE PROF. EN CS, BIOLÓGICAS</span>
+      <div class="subtitle-line"></div>
+      <span>INFORMÁTICA EDUCATIVA</span>
+    </div>
   </header>
 
+  <!-- CONTENIDO ACÁ ABAJO -->
   <div class="grid-container">
     <!-- IZQUIERDA -->
     <div class="column">
-      <div class="section-title">IA de imágenes: Leonardo AI</div>
-      <div class="card" onclick="openModal('separador1.jpg', '1) Leonardo AI es más preciso...')">
+      <div class="section-title">IA de Imágenes</div>
+      <div class="card" onclick="openModal('separador1.jpg', 'Imagen generada con IA usando Leonardo.ai. Basada en un prompt para representar las estructuras florales en estilo medieval.')">
         <img src="separador1.jpg" alt="Estructura Floral">
-        <div class="overlay">ESTRUCTURA FLORAL CON ESTILO DE ILUSTRACIÓN MEDIEVAL (IA)</div>
+        <div class="overlay">ESTRUCTURA FLORAL CON ESTILO DE ILUSTRACIÓN MEDIEVAL</div>
       </div>
-      <div class="card" onclick="openModal('separador2.jpg', 'Cadena trófica generada con IA')">
+      <div class="card" onclick="openModal('separador2.jpg', 'Cadena trófica ilustrada con IA. Representación de la Laguna de La Pampa.')">
         <img src="separador2.jpg" alt="Cadena Trófica">
-        <div class="overlay">CADENA TRÓFICA DE LAGUNA DE LA PAMPA (IA)</div>
+        <div class="overlay">CADENA TRÓFICA DE LA PAMPA (IA)</div>
       </div>
-      <div class="section-title">Mapas conceptuales</div>
-      <div class="card" onclick="openModal('mapa1.png', 'Especies nativas por ecorregiones de La Pampa')">
-        <img src="mapa1.png" alt="Ecorregiones La Pampa">
-        <div class="overlay">Nativas por Ecorregiones de La Pampa</div>
+
+      <div class="section-title">Mapas Conceptuales</div>
+      <div class="card" onclick="openModal('mapa1.png', 'Mapa de especies nativas por ecorregión en La Pampa.')">
+        <img src="mapa1.png" alt="Mapa 1">
+        <div class="overlay">Ecorregiones y Flora Nativa</div>
       </div>
-      <div class="card" onclick="openModal('mapa2.png', 'Herramientas digitales para clase de Biología')">
-        <img src="mapa2.png" alt="Herramientas">
-        <div class="overlay">Herramientas para la clase de Biología</div>
+      <div class="card" onclick="openModal('mapa2.png', 'Mapa sobre herramientas digitales para Biología.')">
+        <img src="mapa2.png" alt="Mapa 2">
+        <div class="overlay">Herramientas Digitales</div>
       </div>
     </div>
 
@@ -201,15 +225,15 @@
       <div class="card">
         <h3>PRIMERA PARTE</h3>
         <p>Video Interactivo: Partes de la Célula</p>
-        <iframe src="https://www.youtube.com/embed/URUJD5NEXC8" title="Video célula" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/URUJD5NEXC8" allowfullscreen></iframe>
       </div>
       <div class="card">
         <h3>SEGUNDA PARTE</h3>
-        <p>Presentación Multimedia: Biología para vivir mejor (El caso de los antibióticos)</p>
+        <p>Presentación Multimedia: Biología para vivir mejor</p>
         <iframe src="https://view.genially.com/683d9dab6902cbcd70f8ad1f/presentation-biologia-para-vivir-mejor-el-caso-de-los-antibioticos" height="400" allowfullscreen></iframe>
       </div>
       <div class="card">
-        <p>Video Tutorial: Cómo crear un gráfico de barras en Canva</p>
+        <p>Video Tutorial: Crear gráficos en Canva</p>
         <iframe src="https://www.youtube.com/embed/QoOyu5GxBzk" allowfullscreen></iframe>
       </div>
     </div>
@@ -217,32 +241,33 @@
     <!-- DERECHA -->
     <div class="column">
       <div class="section-title">Trabajos Prácticos</div>
-      <div class="tp-card" onclick="openModal('tp1-preview.jpg')">
+      <div class="tp-card">
         <img src="tp1-preview.jpg" alt="TP1">
-        <a href="TP%201%20-%20Sistema%20INMUNOL%C3%93GICO.pdf" target="_blank">TP 1 - Sistema Inmunológico</a>
+        <a href="TP 1 - Sistema INMUNOLÓGICO.pdf" target="_blank">TP 1 - Sistema Inmunológico</a>
       </div>
-      <div class="tp-card" onclick="openModal('tp2-preview.jpg')">
+      <div class="tp-card">
         <img src="tp2-preview.jpg" alt="TP2">
-        <a href="TP%202%20-%20Historia%20de%20las%20Clasificaciones.pdf" target="_blank">TP 2 - Historia de las Clasificaciones</a>
+        <a href="TP 2 - Historia de las Clasificaciones.pdf" target="_blank">TP 2 - Historia de las Clasificaciones</a>
       </div>
-      <div class="tp-card" onclick="openModal('tp3-preview.jpg')">
+      <div class="tp-card">
         <img src="tp3-preview.jpg" alt="TP3">
-        <a href="TP%203%20-%20Recursos%20para%20Biolog%C3%ADa%20(Benvenuto,%20Bolpato,%20Moreno).pdf" target="_blank">TP 3 - Recursos para Biología</a>
+        <a href="TP 3 - Recursos para Biología.pdf" target="_blank">TP 3 - Recursos para Biología</a>
       </div>
-      <div class="tp-card" onclick="openModal('tp4-preview.jpg')">
+      <div class="tp-card">
         <img src="tp4-preview.jpg" alt="TP4">
-        <a href="TP%204%20-%20Aplicaci%C3%B3n%20de%20IA's%20(Benvenuto,%20Bolpato,%20Moreno).pdf" target="_blank">TP 4 - Aplicación de IA's</a>
+        <a href="TP 4 - Aplicación de IAs.pdf" target="_blank">TP 4 - Aplicación de IA's</a>
       </div>
-      <div class="section-title">MORENO INTENDENTE (Obamizado)</div>
-      <div class="card" onclick="openModal('moreno-yeswecan.png', 'Federico Moreno en estilo Obama: propuesta docente e inspiradora.')">
-        <img src="moreno-yeswecan.png" alt="Perfil estilo Yes We Can">
-        <div class="overlay">Perfil docente</div>
-      </div>
+
+      <div class="section-title">Recurso interactivo</div>
       <div class="card">
-        <div style="text-align: center;">
-          <img src="exe-logo.png" alt="Logo eXeLearning" style="width: 60px; margin-bottom: 10px;">
-        </div>
+        <img src="exe-logo.png" alt="Logo eXeLearning" style="width: 60px; margin: 10px auto; display: block;">
         <a href="hongos-exe/index.html" target="_blank">Recurso interactivo: El mundo de los hongos</a>
+      </div>
+
+      <div class="section-title">Perfil docente</div>
+      <div class="card" onclick="openModal('moreno-yeswecan.png', 'Retrato en estilo "Yes We Can"')">
+        <img src="moreno-yeswecan.png" alt="Yes We Can">
+        <div class="overlay">Obamizado</div>
       </div>
     </div>
   </div>
@@ -251,6 +276,7 @@
     Contacto: fmoreno_91@hotmail.com
   </footer>
 
+  <!-- Modal para imagen -->
   <div id="imgModal" class="modal" onclick="closeModal()">
     <span class="modal-close">&times;</span>
     <img class="modal-content" id="modalImage">

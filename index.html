@@ -166,7 +166,7 @@
   <div class="column">
     <!-- Ilustraciones IA -->
     <div class="section-title">IA de imágenes: Leonardo AI</div>
-    <div class="card" onclick="openModal('separador1.jpg')">
+    <div class="card" onclick="openModal('separador1.jpg', 'Estructura floral con estilo de ilustración medieval generada por IA.')">
       <img src="separador1.jpg" alt="Estructura Floral">
       <div class="overlay">ESTRUCTURA FLORAL CON ESTILO DE ILUSTRACIÓN MEDIEVAL (IA)</div>
     </div>
@@ -254,15 +254,19 @@
   </footer>
 
   <div id="imgModal" class="modal" onclick="closeModal()">
-    <span class="modal-close">&times;</span>
-    <img class="modal-content" id="modalImage">
-  </div>
+  <span class="modal-close">&times;</span>
+  <img class="modal-content" id="modalImage">
+  <div id="modalCaption" style="color:white; text-align:center; margin-top:10px; font-size:16px;"></div>
+</div>
+
 
   <script>
-    function openModal(imageSrc) {
-      document.getElementById("imgModal").style.display = "block";
-      document.getElementById("modalImage").src = imageSrc;
-    }
+    function openModal(imageSrc, captionText = '') {
+  document.getElementById("imgModal").style.display = "block";
+  document.getElementById("modalImage").src = imageSrc;
+  document.getElementById("modalCaption").innerText = captionText;
+}
+
 
     function closeModal() {
       document.getElementById("imgModal").style.display = "none";
